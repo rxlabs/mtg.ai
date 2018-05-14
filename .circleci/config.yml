@@ -44,6 +44,9 @@ jobs:
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
+          name: Install npm
+          command: npm install -g npm@6
+      - run:
           name: Install dependencies
           command: npm ci
       - save_cache:
