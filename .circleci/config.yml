@@ -40,7 +40,7 @@ jobs:
       - checkout
       - run:
           name: Move target to working directory
-          command: mv /tmp/gql/target gql
+          command: mv /tmp/workspace/gql/target gql
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
