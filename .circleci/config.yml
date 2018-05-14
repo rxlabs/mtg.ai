@@ -15,6 +15,7 @@ jobs:
           key: m2-{{ arch }}-{{ checksum "gql/project.clj" }}
       - run:
           name: Install dependencies
+          working_directory: ~/project/gql
           command: lein deps
       - save_cache:
           paths:
