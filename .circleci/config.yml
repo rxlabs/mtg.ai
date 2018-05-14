@@ -50,6 +50,9 @@ jobs:
           name: Deploy
           working_directory: ~/project/gql
           command: npx serverless deploy
+      - store_artifacts:
+          path: gql/target/mtg-gql-standalone.jar
+          destination: gql
 
 workflows:
   version: 2
