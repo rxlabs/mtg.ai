@@ -31,6 +31,8 @@ jobs:
             - gql/target
 
   gql-deploy:
+    docker:
+      - image: node
     working_directory: ~/build
     steps:
       - attach_workspace:
