@@ -30,8 +30,35 @@ jobs:
           paths:
             - gql/target
 
+  gql-deploy:
+    working_directory: ~/build
+    steps:
+      - attach_workspace:
+          at: /tmp/workspace
+      - checkout
+      - run:
+          name: Move target to working directory
+          command: mv /tmp/gq/target gql
+      - run:
+          name: Install dependencies
+          command: npm ci
+      - run:
+          name: Package
+          working_directory: ~/project/gql
+          command: npx serverless package
+      - deploy:
+          name: Deploy
+          working_directory: ~/project/gql
+          command: npx serverless deploy
+
 workflows:
   version: 2
   default:
     jobs:
       - gql
+      - gql-deploy:
+          filters:
+            branches:
+              only: master
+          requires:
+            - gql
