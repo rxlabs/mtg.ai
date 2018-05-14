@@ -1,4 +1,4 @@
-# Magic: The Gathering Assistants
+# Magic: The Gathering Google Assistant
 
 ## License
 
