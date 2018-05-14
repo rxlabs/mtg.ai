@@ -59,7 +59,7 @@ jobs:
       - deploy:
           name: Deploy
           working_directory: ~/project/gql
-          command: npx serverless deploy
+          command: npx serverless deploy --aws-s3-accelerate
       - store_artifacts:
           path: gql/target/mtg-gql-standalone.jar
           destination: mtg-gql-standalone.jar
