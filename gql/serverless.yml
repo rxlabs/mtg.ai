@@ -1,3 +1,4 @@
+---
 service: mtg-gql
 
 frameworkVersion: "^1.27.0"
