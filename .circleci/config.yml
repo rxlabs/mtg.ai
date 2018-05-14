@@ -33,7 +33,7 @@ jobs:
   gql-deploy:
     docker:
       - image: node
-    working_directory: ~/build
+    working_directory: ~/project
     steps:
       - attach_workspace:
           at: /tmp/workspace
