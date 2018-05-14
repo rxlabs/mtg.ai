@@ -22,9 +22,13 @@ jobs:
             - ~/.m2
           key: m2-{{ arch}}-{{ checksum "gql/project.clj" }}
       - run:
-          name: Build
+          name: Build JAR
           working_directory: ~/project/gql
           command: lein uberjar
+      - persist_to_workspace:
+          root: .
+          paths:
+            - gql/target
 
 workflows:
   version: 2
