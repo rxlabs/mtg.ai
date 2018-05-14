@@ -4,6 +4,8 @@
 
 This software is licensed under the MIT license.
 
+This project is not produced, endorsed, supported, or affiliated with Wizards of the Coast.
+
 ## Warranty
 
 This software is provided by the copyright holders and contributors "as is" and
