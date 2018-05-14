@@ -1,0 +1,16 @@
+service: mtg-gql
+
+frameworkVersion: "^1.27.0"
+
+provider:
+  name: aws
+  region: us-west-2
+  runtime: java8
+  stage: dev
+
+package:
+  artifact: target/mtg-gql-standalone.jar
+
+functions:
+  hello:
+    handler: mtg-gql.core::handler
