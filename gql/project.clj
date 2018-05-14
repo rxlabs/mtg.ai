@@ -3,5 +3,9 @@
   :url "https://github.com/rxlabs/mtg.ai"
   :license {:name "MIT"
             :url "https://opensource.org/licenses/MIT"}
-  :dependencies [[org.clojure/clojure "1.9.0"]]
-  :uberjar-name "mtg-gql-standalone.jar")
+  :dependencies [[org.clojure/clojure "1.9.0"]
+                 [org.clojure/data.json "0.2.6"]
+                 [uswitch/lambada "0.1.2"] ]
+  :main mtg-gql.core
+  :uberjar-name "mtg-gql-standalone.jar"
+  :profiles {:uberjar {:aot :all}})
