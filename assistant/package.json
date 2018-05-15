@@ -4,12 +4,16 @@
   "repository": "rxlabs/mtg.ai",
   "private": true,
   "main": "index.js",
+  "prettier": {
+    "semi": false
+  },
   "dependencies": {
     "source-map-support": "^0.5.0"
   },
   "devDependencies": {
     "@types/aws-lambda": "0.0.22",
     "@types/node": "^8.0.57",
+    "prettier": "^1.12.1",
     "serverless": "^1.27.2",
     "serverless-webpack": "^4.0.0",
     "ts-loader": "^2.3.7",
