@@ -4,6 +4,7 @@
   "repository": "rxlabs/mtg.ai",
   "private": true,
   "devDependencies": {
-    "serverless": "^1.27.2"
+    "serverless": "^1.27.2",
+    "serverless-webpack": "^4.0.0"
   }
 }
