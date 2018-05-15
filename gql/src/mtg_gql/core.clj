@@ -1,18 +1,15 @@
 (ns mtg-gql.core
-  (:require [uswitch.lambada.core :refer [deflambdafn]]
-            [clojure.data.json :as json]
-            [clojure.java.io :as io]))
+  (:require
+   [uswitch.lambada.core :refer [deflambdafn]]
+   [cheshire.core :as json]
+   [taoensso.timbre :as log]
+   [clojure.java.io :as io]))
 
-(defn handle-event
-  [event]
-  (println "Got the following event: " (pr-str event))
-  {:status "ok"})
-
-(defn l-json
-  [f in out ctx]
-  (let [event (json/read (io/reader in))
-        res (f event)]
+(deflambdafn mtg-gql.core.Hello
+  [in out context]
+  (log/info "Starting Lambda")
+  (let [body (-> in io/reader (json/parse-stream keyword))
+        result (assoc {} :data (-> body :max num))]
     (with-open [w (io/writer out)]
-      (json/write res w))))
-
-(deflambdafn mtg-gql.core.Hello (partial l-json handle-event))
+      (json/generate-stream result w)
+      (log/info "Lambda finished"))))

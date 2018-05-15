@@ -4,7 +4,8 @@
   :license {:name "MIT"
             :url "https://opensource.org/licenses/MIT"}
   :dependencies [[org.clojure/clojure "1.9.0"]
-                 [org.clojure/data.json "0.2.6"]
+                 [cheshire "5.8.0"]
+                 [com.taoensso/timbre "4.10.0"]
                  [uswitch/lambada "0.1.2"] ]
   :uberjar-name "mtg-gql-standalone.jar"
   :profiles {:uberjar {:aot :all}})
