@@ -1,5 +1,5 @@
 ---
-service: mtg-gql
+service: mtg-graphql
 
 frameworkVersion: "^1.27.0"
 
