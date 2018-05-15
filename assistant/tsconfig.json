@@ -2,6 +2,7 @@
   "compilerOptions": {
     "sourceMap": true,
     "lib": [
+      "esnext.asynciterable",
       "es5",
       "es2015.promise"
     ]
