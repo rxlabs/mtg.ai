@@ -69,7 +69,7 @@ workflows:
   default:
     jobs:
       - graphql
-      - serverless-graphql
+      - serverless-graphql:
           filters:
             branches:
               only: master
