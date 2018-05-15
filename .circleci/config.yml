@@ -87,6 +87,10 @@ jobs:
           name: Test
           working_directory: ~/project/assistant
           command: npm test
+      - run:
+          name: Package
+          working_directory: ~/project/assistant
+          command: npx serverless package
 
   serverless-assistant:
     docker:
@@ -103,10 +107,6 @@ jobs:
           name: Install dependencies
           working_directory: ~/project/assistant
           command: npm ci
-      - run:
-          name: Package
-          working_directory: ~/project/assistant
-          command: npx serverless package
       - deploy:
           name: Deploy
           working_directory: ~/project/assistant

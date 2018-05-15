@@ -14,8 +14,8 @@ provider:
 
 functions:
   assistant:
-    handler: index.hello
+    handler: index.fulfillment
     events:
       - http:
-          method: get
-          path: hello
+          method: post
+          path: fulfillment

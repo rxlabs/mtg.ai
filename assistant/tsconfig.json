@@ -1,11 +1,9 @@
 {
   "compilerOptions": {
     "sourceMap": true,
-    "lib": [
-      "esnext.asynciterable",
-      "es5",
-      "es2015.promise"
-    ]
+    "target": "es6",
+    "module": "commonjs",
+    "strict": true
   },
   "exclude": [
     "node_modules"
