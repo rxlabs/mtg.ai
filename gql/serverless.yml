@@ -14,4 +14,4 @@ package:
 
 functions:
   hello:
-    handler: mtg-gql.core::handler
+    handler: mtg-gql.core.Handler
