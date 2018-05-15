@@ -16,8 +16,8 @@
     "@types/node": "^8.0.57",
     "prettier": "^1.12.1",
     "serverless": "^1.27.2",
-    "serverless-webpack": "^4.0.0",
-    "ts-loader": "^2.3.7",
+    "serverless-webpack": "^5.1.5",
+    "ts-loader": "^4.3.0",
     "tslint": "^5.10.0",
     "typescript": "^2.5.2",
     "webpack": "^3.6.0"
