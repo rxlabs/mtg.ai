@@ -6,12 +6,12 @@ frameworkVersion: "^1.27.0"
 provider:
   name: aws
   region: us-west-2
-  runtime: java8
   stage: dev
 
 package:
-  artifact: target/mtg-gql-standalone.jar
+  artifact: graphql/target/mtg-gql-standalone.jar
 
 functions:
   graphql:
+    runtime: java8
     handler: mtg-gql.core.GraphQL

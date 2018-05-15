@@ -5,8 +5,6 @@
 # For more details, visit the project page:
 # https://github.com/github/gitignore
 
-.serverless
-
 # Logs
 logs
 *.log

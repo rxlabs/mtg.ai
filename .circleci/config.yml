@@ -2,7 +2,7 @@
 version: 2
 
 jobs:
-  gql:
+  graphql:
     working_directory: ~/project
     docker:
       - image: circleci/clojure:lein
@@ -12,25 +12,25 @@ jobs:
     steps:
       - checkout
       - restore_cache:
-          key: m2-{{ arch }}-{{ checksum "gql/project.clj" }}
+          key: m2-{{ arch }}-{{ checksum "graphql/project.clj" }}
       - run:
           name: Install dependencies
-          working_directory: ~/project/gql
+          working_directory: ~/project/graphql
           command: lein deps
       - save_cache:
           paths:
             - ~/.m2
-          key: m2-{{ arch}}-{{ checksum "gql/project.clj" }}
+          key: m2-{{ arch}}-{{ checksum "graphql/project.clj" }}
       - run:
           name: Build JAR
-          working_directory: ~/project/gql
+          working_directory: ~/project/graphql
           command: lein uberjar
       - persist_to_workspace:
           root: .
           paths:
-            - gql/target
+            - graphql/target
 
-  gql-deploy:
+  serverless:
     docker:
       - image: node
     working_directory: ~/project
@@ -40,7 +40,7 @@ jobs:
       - checkout
       - run:
           name: Move target to working directory
-          command: mv /tmp/workspace/gql/target gql
+          command: mv /tmp/workspace/graphql/target graphql
       - restore_cache:
           key: dependency-cache-{{ checksum "package.json" }}
       - run:
@@ -54,24 +54,22 @@ jobs:
           paths: ~/.npm
       - run:
           name: Package
-          working_directory: ~/project/gql
           command: npx serverless package
       - deploy:
           name: Deploy
-          working_directory: ~/project/gql
           command: npx serverless deploy --aws-s3-accelerate
       - store_artifacts:
-          path: gql/target/mtg-gql-standalone.jar
+          path: graphql/target/mtg-gql-standalone.jar
           destination: mtg-gql-standalone.jar
 
 workflows:
   version: 2
   default:
     jobs:
-      - gql
-      - gql-deploy:
+      - graphql
+      - serverless:
           filters:
             branches:
               only: master
           requires:
-            - gql
+            - graphql
