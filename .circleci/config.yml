@@ -42,15 +42,16 @@ jobs:
           name: Move target to working directory
           command: mv /tmp/workspace/graphql/target graphql
       - restore_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "graphql/package.json" }}
       - run:
           name: Install npm
           command: npm install -g npm@6
       - run:
           name: Install dependencies
+          working_directory: ~/project/graphql
           command: npm ci
       - save_cache:
-          key: dependency-cache-{{ checksum "package.json" }}
+          key: dependency-cache-{{ checksum "graphql/package.json" }}
           paths: ~/.npm
       - run:
           name: Package
