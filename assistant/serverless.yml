@@ -1,0 +1,21 @@
+---
+service: mtg-assistant
+
+frameworkVersion: "^1.27.0"
+
+plugins:
+  - serverless-webpack
+
+provider:
+  name: aws
+  region: us-west-2
+  runtime: nodejs8.10
+  stage: dev
+
+functions:
+  assistant:
+    handler: index.hello
+    events:
+      - http:
+          method: get
+          path: hello

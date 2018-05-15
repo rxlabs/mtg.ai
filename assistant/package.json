@@ -1,0 +1,17 @@
+{
+  "name": "mtg-assistant",
+  "license": "MIT",
+  "repository": "rxlabs/mtg.ai",
+  "private": true,
+  "main": "index.js",
+  "dependencies": {
+    "source-map-support": "^0.5.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "0.0.22",
+    "@types/node": "^8.0.57",
+    "ts-loader": "^2.3.7",
+    "typescript": "^2.5.2",
+    "webpack": "^3.6.0"
+  }
+}
