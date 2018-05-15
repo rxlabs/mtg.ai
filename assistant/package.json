@@ -4,6 +4,9 @@
   "repository": "rxlabs/mtg.ai",
   "private": true,
   "main": "index.js",
+  "scripts": {
+    "test": "true"
+  },
   "prettier": {
     "singleQuote": true,
     "semi": false

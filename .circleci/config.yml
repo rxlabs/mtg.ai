@@ -42,7 +42,7 @@ jobs:
           name: Move target to working directory
           command: mv /tmp/workspace/graphql/target graphql
       - restore_cache:
-          key: dependency-cache-{{ checksum "graphql/package.json" }}
+          key: npm-graphql-{{ checksum "graphql/package.json" }}
       - run:
           name: Install npm
           command: npm install -g npm@6
@@ -51,7 +51,7 @@ jobs:
           working_directory: ~/project/graphql
           command: npm ci
       - save_cache:
-          key: dependency-cache-{{ checksum "graphql/package.json" }}
+          key: npm-graphql-{{ checksum "graphql/package.json" }}
           paths: ~/.npm
       - run:
           name: Package
@@ -65,10 +65,64 @@ jobs:
           path: graphql/target/mtg-gql-standalone.jar
           destination: mtg-gql-standalone.jar
 
+  assistant:
+    docker:
+      - image: node:carbon
+    working_directory: ~/project
+    steps:
+      - checkout
+      - restore_cache:
+          key: npm-assistant-{{ checksum "assistant/package.json" }}
+      - run:
+          name: Install npm
+          command: npm install -g npm@6
+      - run:
+          name: Install dependencies
+          working_directory: ~/project/assistant
+          command: npm ci
+      - save_cache:
+          key: npm-assistant-{{ checksum "assistant/package.json" }}
+          paths: ~/.npm
+      - run:
+          name: Test
+          working_directory: ~/project/assistant
+          command: npm test
+
+  serverless-assistant:
+    docker:
+      - image: node:carbon
+    working_directory: ~/project
+    steps:
+      - checkout
+      - restore_cache:
+          key: npm-assistant-{{ checksum "assistant/package.json" }}
+      - run:
+          name: Install npm
+          command: npm install -g npm@6
+      - run:
+          name: Install dependencies
+          working_directory: ~/project/assistant
+          command: npm ci
+      - run:
+          name: Package
+          working_directory: ~/project/assistant
+          command: npx serverless package
+      - deploy:
+          name: Deploy
+          working_directory: ~/project/assistant
+          command: npx serverless deploy --aws-s3-accelerate
+
 workflows:
   version: 2
   default:
     jobs:
+      - assistant
+      - serverless-assistant:
+          filters:
+            branches:
+              only: master
+          requires:
+            - assistant
       - graphql
       - serverless-graphql:
           filters:
