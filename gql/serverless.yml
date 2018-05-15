@@ -13,5 +13,5 @@ package:
   artifact: target/mtg-gql-standalone.jar
 
 functions:
-  hello:
-    handler: mtg-gql.core.Hello
+  graphql:
+    handler: mtg-gql.core.GraphQL
