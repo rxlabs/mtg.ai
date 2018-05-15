@@ -20,6 +20,6 @@
     "ts-loader": "^4.3.0",
     "tslint": "^5.10.0",
     "typescript": "^2.5.2",
-    "webpack": "^3.6.0"
+    "webpack": "^4.8.3"
   }
 }

@@ -19,7 +19,8 @@ module.exports = {
     filename: '[name].js'
   },
   target: 'node',
+  mode: 'production',
   module: {
-    loaders: [{ test: /\.ts(x?)$/, loader: 'ts-loader' }]
+    rules: [{ test: /\.ts(x?)$/, loader: 'ts-loader' }]
   }
 }
