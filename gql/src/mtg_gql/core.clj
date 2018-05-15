@@ -15,4 +15,4 @@
     (with-open [w (io/writer out)]
       (json/write res w))))
 
-(deflambdafn mtg-gql.core.Handler (partial l-json handle-event))
+(deflambdafn mtg-gql.core.Hello (partial l-json handle-event))
