@@ -30,7 +30,7 @@ jobs:
           paths:
             - graphql/target
 
-  serverless:
+  serverless-graphql:
     docker:
       - image: node
     working_directory: ~/project
@@ -54,9 +54,11 @@ jobs:
           paths: ~/.npm
       - run:
           name: Package
+          working_directory: ~/project/graphql
           command: npx serverless package
       - deploy:
           name: Deploy
+          working_directory: ~/project/graphql
           command: npx serverless deploy --aws-s3-accelerate
       - store_artifacts:
           path: graphql/target/mtg-gql-standalone.jar
@@ -67,7 +69,7 @@ workflows:
   default:
     jobs:
       - graphql
-      - serverless:
+      - serverless-graphql
           filters:
             branches:
               only: master

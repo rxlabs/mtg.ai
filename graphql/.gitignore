@@ -5,6 +5,8 @@
 # For more details, visit the project page:
 # https://github.com/github/gitignore
 
+.serverless
+
 pom.xml
 pom.xml.asc
 *.jar
