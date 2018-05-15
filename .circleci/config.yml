@@ -32,7 +32,7 @@ jobs:
 
   serverless-graphql:
     docker:
-      - image: node
+      - image: node:carbon
     working_directory: ~/project
     steps:
       - attach_workspace:
