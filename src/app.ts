@@ -6,9 +6,7 @@ const req = request.defaults({
   json: true
 })
 
-const findCard = name => (
-  req.get('/cards', { qs: { name } })
-)
+const findCard = name => req.get('/cards', { qs: { name } })
 
 export function dialogflowApp() {
   const app = dialogflow()
