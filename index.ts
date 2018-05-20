@@ -8,7 +8,8 @@ import * as connect from 'connect'
 import { dialogflowApp } from './src/app'
 
 const app = connect()
+
 app.use(bodyParser())
 app.use(dialogflowApp())
 
-export const handler = serverless(app)
+export const fulfillment = serverless(app)

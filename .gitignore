@@ -6,7 +6,6 @@
 # https://github.com/github/gitignore
 
 .serverless
-.webpack
 
 # Logs
 logs
