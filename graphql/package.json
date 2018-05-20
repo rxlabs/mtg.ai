@@ -1,9 +1,0 @@
-{
-  "name": "mtg-graphql",
-  "license": "MIT",
-  "repository": "rxlabs/mtg.ai",
-  "private": true,
-  "devDependencies": {
-    "serverless": "^1.27.2"
-  }
-}
