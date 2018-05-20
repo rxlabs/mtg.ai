@@ -20,7 +20,7 @@ functions:
       - http:
           method: post
           path: fulfillment
-          private: true
+          private: public
 
 custom:
   customDomain:
