@@ -4,10 +4,10 @@ import 'source-map-support/register'
 const serverless = require('serverless-http')
 
 import * as bodyParser from 'body-parser'
-import * as connect from 'connect'
+import * as express from 'express'
 import { dialogflowApp } from './src/app'
 
-const app = connect()
+const app = express()
 
 app.use(bodyParser.json())
 app.use(dialogflowApp())

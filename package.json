@@ -12,9 +12,9 @@
     "semi": false
   },
   "dependencies": {
-    "actions-on-google": "~2.0.1",
+    "actions-on-google": "^2.1.1",
     "body-parser": "^1.18.3",
-    "connect": "^3.6.6",
+    "express": "^4.16.3",
     "serverless-http": "^1.5.5",
     "source-map-support": "^0.5.0"
   },
