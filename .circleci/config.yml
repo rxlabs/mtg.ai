@@ -25,32 +25,9 @@ jobs:
       - run:
           name: Package
           command: npx serverless package
-  deploy:
-    docker:
-      - image: node:carbon
-    working_directory: ~/project
-    steps:
-      - checkout
-      - restore_cache:
-          key: npm-{{ checksum "package.json" }}
-      - run:
-          name: Install npm
-          command: npm install -g npm@6
-      - run:
-          name: Install dependencies
-          command: npm ci
       - deploy:
           name: Deploy
-          command: npx serverless deploy --aws-s3-accelerate
-
-workflows:
-  version: 2
-  default:
-    jobs:
-      - build
-      - deploy:
-          filters:
-            branches:
-              only: master
-          requires:
-            - build
+          command: |
+            if [ "${CIRCLE_BRANCH}" == "master" ]; then
+              npx serverless deploy --aws-s3-accelerate
+            fi
