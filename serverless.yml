@@ -1,0 +1,31 @@
+---
+service: mtg-ai
+
+frameworkVersion: "^1.27.0"
+
+plugins:
+  - serverless-plugin-typescript
+  - serverless-domain-manager
+
+provider:
+  name: aws
+  region: us-west-2
+  runtime: nodejs8.10
+  stage: dev
+
+functions:
+  assistant:
+    handler: index.fulfillment
+    events:
+      - http:
+          method: post
+          path: fulfillment
+          private: true
+
+custom:
+  customDomain:
+    domainName: mtg.razorx.app
+    stage: dev
+    basePath: 'ai'
+    endpointType: 'regional'
+    createRoute53Record: true
