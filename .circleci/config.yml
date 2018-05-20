@@ -23,7 +23,7 @@ jobs:
           name: Deploy
           command: |
             if [[ -z "${CI_PULL_REQUEST}" && "${CIRCLE_BRANCH}" == "master" ]]; then
-              npx serverless deploy --aws-s3-accelerate
+              npm run deploy
             else
-              npx serverless package
+              npm run package
             fi

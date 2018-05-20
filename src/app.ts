@@ -3,7 +3,7 @@ import * as request from 'request-promise-native'
 
 const req = request.defaults({
   baseUrl: 'https://api.magicthegathering.io/v1',
-  json: true
+  json: true,
 })
 
 const findCard = name => req.get('/cards', { qs: { name } })
