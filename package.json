@@ -21,8 +21,7 @@
   },
   "dependencies": {
     "actions-on-google": "^2.1.0",
-    "request": "^2.86.0",
-    "request-promise-native": "^1.0.5",
+    "mtgsdk-ts": "^1.1.2",
     "source-map-support": "^0.5.0"
   },
   "devDependencies": {
