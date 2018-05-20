@@ -14,7 +14,7 @@
   "dependencies": {
     "actions-on-google": "^2.1.1",
     "body-parser": "^1.18.3",
-    "express": "^4.16.3",
+    "connect": "^3.6.6",
     "serverless-http": "^1.5.5",
     "source-map-support": "^0.5.0"
   },
@@ -26,8 +26,6 @@
     "serverless": "^1.27.2",
     "serverless-domain-manager": "^2.4.0",
     "serverless-plugin-typescript": "^1.1.5",
-    "ts-loader": "^4.3.0",
-    "tslint": "^5.10.0",
-    "webpack": "^4.8.3"
+    "tslint": "^5.10.0"
   }
 }
