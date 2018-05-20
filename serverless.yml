@@ -5,6 +5,7 @@ frameworkVersion: "^1.27.0"
 
 plugins:
   - serverless-plugin-typescript
+  - serverless-offline
   - serverless-domain-manager
 
 provider:
