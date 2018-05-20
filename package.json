@@ -8,7 +8,7 @@
     "build": "tsc",
     "pretest": "npm-run-all --parallel lint style",
     "test": "true",
-    "lint": "tslint --project ./tsconfig.json",
+    "lint": "tslint --project .",
     "style": "prettier --ignore-path .gitignore --list-different '**/*.ts'",
     "format": "prettier --ignore-path .gitignore --write '**/*.ts'",
     "package": "serverless package",
