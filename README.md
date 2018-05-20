@@ -1,5 +1,7 @@
 # Magic: The Gathering Google Assistant
 
+[![CircleCI](https://circleci.com/gh/rxlabs/mtg.ai.svg?style=shield)](https://circleci.com/gh/rxlabs/mtg.ai)
+
 ## License
 
 This software is licensed under the MIT license.
