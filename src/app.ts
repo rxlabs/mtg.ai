@@ -1,5 +1,5 @@
 import { dialogflow } from 'actions-on-google'
-import request from 'request'
+import * as request from 'request'
 
 const req = request.defaults({
   baseUrl: 'https://api.magicthegathering.io/v1',
