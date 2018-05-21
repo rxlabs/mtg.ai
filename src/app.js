@@ -11,7 +11,7 @@ import initI18n from './i18n'
 
 export function dialogflowApp () {
   const app = dialogflow()
-  const i18n = initI18n()
+  const i18n = initI18n({lng: 'en'})
   const t = (...args) => i18n.t(...args)
 
   app.intent('get_card_by_name', async (conv, { cardName }) => {
