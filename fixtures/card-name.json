@@ -1,0 +1,31 @@
+{
+  "responseId": "a810facd-beb9-40e9-bc70-dd4b0805f41e",
+  "queryResult": {
+    "queryText": "What does the card doom blade say",
+    "action": "get_card_by_name",
+    "parameters": {
+      "cardName": "doom blade"
+    },
+    "allRequiredParamsPresent": true,
+    "fulfillmentMessages": [
+      {
+        "text": {
+          "text": [
+            ""
+          ]
+        }
+      }
+    ],
+    "intent": {
+      "name": "projects/mtg-ai-1912b/agent/intents/6c13466d-871b-4f70-aa22-b3992708b6f1",
+      "displayName": "get_card_by_name"
+    },
+    "intentDetectionConfidence": 1,
+    "diagnosticInfo": {},
+    "languageCode": "en"
+  },
+  "originalDetectIntentRequest": {
+    "payload": {}
+  },
+  "session": "projects/mtg-ai-1912b/agent/sessions/70abdd2f-d81f-40ef-95c9-00e88911da1c"
+}
