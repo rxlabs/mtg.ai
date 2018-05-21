@@ -13,7 +13,7 @@
     "package": "serverless package",
     "offline": "serverless offline --apiKey key | roarr pretty-print",
     "deploy": "serverless deploy --aws-s3-accelerate",
-    "preversion": "npm-run-all --parallel test package",
+    "preversion": "npm-run-all --parallel test build",
     "postversion": "git push && git push --tags"
   },
   "dependencies": {
