@@ -12,7 +12,9 @@
     "prebuild": "rm -rf build",
     "package": "serverless package",
     "offline": "serverless offline --apiKey key | roarr pretty-print",
-    "deploy": "serverless deploy --aws-s3-accelerate"
+    "deploy": "serverless deploy --aws-s3-accelerate",
+    "preversion": "npm-run-all --parallel test package",
+    "postversion": "git push && git push --tags"
   },
   "dependencies": {
     "actions-on-google": "^2.1.0",
