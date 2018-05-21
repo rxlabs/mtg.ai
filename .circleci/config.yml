@@ -22,12 +22,11 @@ jobs:
       - deploy:
           name: Deploy
           command: |
-            if [[ -z "${CI_PULL_REQUEST}" && "${CIRCLE_BRANCH}" == "master" ]]; then
-              stage="dev"
-              if [[ -n "${CIRCLE_TAG}" ]]; then
-                stage="alpha"
-              fi
-              npm run deploy --stage $stage
+            if [[ -n "${CIRCLE_TAG}" ]]; then
+              stage="alpha"
+              npm run deploy -- --stage $stage
+            elif [[ -z "${CI_PULL_REQUEST}" && "${CIRCLE_BRANCH}" == "master" ]]; then
+              npm run deploy
             else
               npm run package
             fi
