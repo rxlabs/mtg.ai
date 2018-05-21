@@ -1,4 +1,4 @@
-import { dialogflow, Image } from 'actions-on-google'
+import { dialogflow, Image, BasicCard } from 'actions-on-google'
 import log from 'roarr'
 import {
   chain,
@@ -22,8 +22,16 @@ export function dialogflowApp () {
 
     chain(c => {
       const { name, text, imageUrl } = c
-      conv.ask(new Image({url: imageUrl, alt: name}))
+      const bc = new BasicCard({
+        text,
+        title: name,
+        image: new Image({
+          url: imageUrl,
+          alt: card.na
+        })
+      })
       conv.ask(`The card ${name} reads ${text}`)
+      conv.ask(bc)
       log({ c }, 'Card')
       return card
     }, card)
