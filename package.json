@@ -12,7 +12,7 @@
     "style": "prettier --ignore-path .gitignore --list-different '**/*.ts'",
     "format": "prettier --ignore-path .gitignore --write '**/*.ts'",
     "package": "serverless package",
-    "offline": "serverless offline --apiKey key",
+    "offline": "serverless offline --apiKey key | roarr pretty-print",
     "deploy": "serverless deploy --aws-s3-accelerate"
   },
   "prettier": {
@@ -23,6 +23,7 @@
   "dependencies": {
     "actions-on-google": "^2.1.0",
     "mtgsdk-ts": "^1.1.2",
+    "roarr": "^2.3.0",
     "source-map-support": "^0.5.0"
   },
   "devDependencies": {

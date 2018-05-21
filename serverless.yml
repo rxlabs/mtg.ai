@@ -13,6 +13,8 @@ provider:
   region: us-west-2
   runtime: nodejs8.10
   stage: dev
+  environment:
+    ROARR_LOG: true
 
 functions:
   assistant:
