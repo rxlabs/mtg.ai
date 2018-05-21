@@ -26,7 +26,18 @@ jobs:
           name: Deploy
           command: |
             if [[ -z "${CI_PULL_REQUEST}" && "${CIRCLE_BRANCH}" == "master" ]]; then
-              npm run deploy
+              stage="dev"
+              if [[ -n "${CIRCLE_TAG}" ]]; then
+                stage="alpha"
+              fi
+              npm run deploy --stage $stage
             else
               npm run package
             fi
+
+workflows:
+  version: 2
+  default:
+    jobs:
+	    tags:
+	      only: /^v.*/
