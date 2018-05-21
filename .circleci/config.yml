@@ -39,5 +39,7 @@ workflows:
   version: 2
   default:
     jobs:
-	    tags:
-	      only: /^v.*/
+      - build:
+          filters:
+            tags:
+              only: /^v.*/
