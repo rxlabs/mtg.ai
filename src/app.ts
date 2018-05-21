@@ -8,7 +8,7 @@ export function dialogflowApp() {
 
   app.intent('get_card_by_name', async (conv, { cardName }) => {
     const card = await findCardByName(cardName)
-    log(`Card ${card}`)
+    log({ card }, 'Card')
 
     if (!card) {
       conv.close('Could not find card.')
