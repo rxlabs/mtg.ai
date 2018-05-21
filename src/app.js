@@ -7,9 +7,12 @@ import {
 } from 'sanctuary'
 
 import { findCardsByName } from './mtgio'
+import initI18n from './i18n'
 
 export function dialogflowApp () {
   const app = dialogflow()
+  const i18n = initI18n()
+  const t = (...args) => i18n.t(...args)
 
   app.intent('get_card_by_name', async (conv, { cardName }) => {
     const cards = await findCardsByName(cardName)
@@ -31,7 +34,7 @@ export function dialogflowApp () {
           alt: name
         })
       })
-      conv.ask(`The card ${name} reads ${body}`)
+      conv.ask(t('card', {name, body}))
       conv.ask(bc)
       log({ c }, 'Card')
       return card
