@@ -28,7 +28,7 @@ export function dialogflowApp () {
         title: name,
         image: new Image({
           url: imageUrl,
-          alt: card.na
+          alt: card.name
         })
       })
       conv.ask(`The card ${name} reads ${body}`)
