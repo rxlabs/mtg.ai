@@ -4,7 +4,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: node
+      - image: node:carbon
     working_directory: ~/app
     steps:
       - checkout
@@ -12,7 +12,7 @@ jobs:
           key: npm-{{ checksum "package-lock.json" }}
       - run:
           name: Install dependencies
-          command: npm ci
+          command: npm install
       - save_cache:
           key: npm-{{ checksum "package-lock.json" }}
           paths: ~/.npm
