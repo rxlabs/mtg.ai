@@ -3,7 +3,7 @@ import log from 'roarr'
 
 import { findCardByName } from './mtgio'
 
-export function dialogflowApp() {
+export function dialogflowApp () {
   const app = dialogflow()
 
   app.intent('get_card_by_name', async (conv, { cardName }) => {

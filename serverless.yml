@@ -4,7 +4,7 @@ service: mtg-ai
 frameworkVersion: "^1.27.0"
 
 plugins:
-  - serverless-plugin-typescript
+  - serverless-webpack
   - serverless-offline
   - serverless-domain-manager
 
@@ -16,6 +16,9 @@ provider:
   environment:
     ROARR_LOG: true
 
+package:
+  individually: true
+
 functions:
   assistant:
     handler: index.fulfillment
@@ -26,6 +29,9 @@ functions:
           private: true
 
 custom:
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
   customDomain:
     domainName: mtg.razorx.app
     stage: dev
