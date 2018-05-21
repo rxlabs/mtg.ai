@@ -21,16 +21,17 @@ export function dialogflowApp () {
     }
 
     chain(c => {
-      const { name, text, imageUrl } = c
+      const { name, text, imageUrl, flavor } = c
+      const body = text || flavor
       const bc = new BasicCard({
-        text,
+        text: body,
         title: name,
         image: new Image({
           url: imageUrl,
           alt: card.na
         })
       })
-      conv.ask(`The card ${name} reads ${text}`)
+      conv.ask(`The card ${name} reads ${body}`)
       conv.ask(bc)
       log({ c }, 'Card')
       return card
