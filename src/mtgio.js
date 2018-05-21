@@ -5,7 +5,12 @@ const req = request.defaults({
   json: true
 })
 
-export const findCardByName = async name => {
+export const findCardsByName = async name => {
   const { cards } = await req.get('/cards', { qs: { name } })
+  return cards
+}
+
+export const findCardByName = async name => {
+  const cards = findCardsByName(name)
   return cards[0]
 }

@@ -1,22 +1,32 @@
-import { dialogflow } from 'actions-on-google'
+import { dialogflow, Image } from 'actions-on-google'
 import log from 'roarr'
+import {
+  chain,
+  find,
+  isNothing
+} from 'sanctuary'
 
-import { findCardByName } from './mtgio'
+import { findCardsByName } from './mtgio'
 
 export function dialogflowApp () {
   const app = dialogflow()
 
   app.intent('get_card_by_name', async (conv, { cardName }) => {
-    const card = await findCardByName(cardName)
-    log({ card }, 'Card')
+    const cards = await findCardsByName(cardName)
+    const card = find(({imageUrl}) => !!imageUrl, cards)
 
-    if (!card) {
+    if (isNothing(card)) {
       conv.close('Could not find card.')
       return
     }
 
-    const { name, text } = card
-    conv.close(`The card ${name} reads ${text}`)
+    chain(c => {
+      const { name, text, imageUrl } = c
+      conv.ask(new Image({url: imageUrl, alt: name}))
+      conv.ask(`The card ${name} reads ${text}`)
+      log({ c }, 'Card')
+      return card
+    }, card)
   })
 
   return app
