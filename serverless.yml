@@ -29,12 +29,15 @@ functions:
           private: true
 
 custom:
+  stage: ${opt:stage, self:provider.stage}
+  env: ${file(serverless-stages.yml):${self:custom.stage}}
+
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
   customDomain:
-    domainName: mtg.razorx.app
-    stage: dev
+    domainName: ${self:custom.env.domainName}
+    stage: ${self:custom.stage}
     basePath: 'ai'
     endpointType: 'regional'
     createRoute53Record: true

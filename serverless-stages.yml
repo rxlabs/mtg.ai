@@ -1,0 +1,12 @@
+---
+dev:
+  domainName: dev.mtg.razorx.app
+
+alpha:
+  domainName: alpha.mtg.razorx.app
+
+beta:
+  domainName: beta.mtg.razorx.app
+
+production:
+  domainName: mtg.razorx.app
