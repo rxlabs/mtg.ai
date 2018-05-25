@@ -19,7 +19,7 @@ export function dialogflowApp () {
     const card = find(({imageUrl}) => !!imageUrl, cards)
 
     if (isNothing(card)) {
-      conv.close('Could not find card.')
+      conv.ask(t('nocard', {name: cardName}))
       return
     }
 

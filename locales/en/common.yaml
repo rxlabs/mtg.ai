@@ -1,3 +1,4 @@
 ---
 common:
   card: The card {{name}} reads {{body}}
+  nocard: I could not find the card {{name}}, please ask again.
