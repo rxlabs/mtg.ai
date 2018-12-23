@@ -17,7 +17,7 @@ provider:
     NODE_ENV: production
 
 custom:
-  domain: mtg.ai.razorx.app
+  domain: razorx.app
   subdomain: mtg.ai
   customDomain:
     domainName: ${self:provider.stage}.${self:custom.subdomain}.${self:custom.domain}
