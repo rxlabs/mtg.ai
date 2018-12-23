@@ -6479,9 +6479,9 @@ no-case@^2.2.0, no-case@^2.3.2:
     lower-case "^1.1.1"
 
 nock@^10.0.4:
-  version "10.0.4"
-  resolved "https://registry.yarnpkg.com/nock/-/nock-10.0.4.tgz#44f5dcfe0a6b09f95d541f6b3f057cfabbbd2a3a"
-  integrity sha512-+kzpiUmJHl2j/ZdJG4Mc3oHJc4F1Tm9j0KV/SLhLKZQGTQkeK2z1XxhVIbM2evP3yn0RVlp7L1xZNIy84J8/1A==
+  version "10.0.5"
+  resolved "https://registry.yarnpkg.com/nock/-/nock-10.0.5.tgz#b8bda2a58795ea32f35e4e2d421d526df645057f"
+  integrity sha512-6roBPXKplUBYM/37RRUb0RyfXLHu+AU10OoaJN2H1S3pOniAx+8+NregAWDp8XS3ZWovJZKZ2tfgaphqDdqB7g==
   dependencies:
     chai "^4.1.2"
     debug "^4.1.0"
@@ -7732,9 +7732,9 @@ read-pkg@^3.0.0:
     util-deprecate "~1.0.1"
 
 readable-stream@^3.0.0, readable-stream@^3.0.6:
-  version "3.1.0"
-  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.1.0.tgz#19c2e9c1ce43507c53f6eefbcf1ee3d4aaa786f5"
-  integrity sha512-vpydAvIJvPODZNagCPuHG87O9JNPtvFEtjHHRVwNVsVVRBqemvPJkc2SYbxJsiZXawJdtZNmkmnsPuE3IgsG0A==
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/readable-stream/-/readable-stream-3.1.1.tgz#ed6bbc6c5ba58b090039ff18ce670515795aeb06"
+  integrity sha512-DkN66hPyqDhnIQ6Jcsvx9bFjhw214O4poMBcIMgPVpQvNy9a0e0Uhg5SqySyDKAmUlwt8LonTBz1ezOnM8pUdA==
   dependencies:
     inherits "^2.0.3"
     string_decoder "^1.1.1"
