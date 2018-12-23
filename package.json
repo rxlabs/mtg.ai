@@ -1,6 +1,6 @@
 {
   "name": "@rxlabs/mtg.ai",
-  "version": "0.0.3",
+  "version": "0.3.0",
   "description": "Package skeleton for an Node.js Serverless project.",
   "main": "dist/index.js",
   "module": "index.js",
