@@ -158,30 +158,12 @@ workflows:
   default:
     jobs:
       - test:
-          name: test-latest
-          <<: *filters
-      - test:
-          name: test-latest-alpine
-          tag: alpine
-          is_alpine: true
-          <<: *filters
-      - test:
           name: test-dubnium
           tag: dubnium
           <<: *filters
       - test:
           name: test-dubnium-alpine
           tag: dubnium-alpine
-          is_alpine: true
-          <<: *filters
-      - test:
-          name: test-carbon
-          tag: carbon
-          upload_coverage: true
-          <<: *filters
-      - test:
-          name: test-carbon-alpine
-          tag: carbon-alpine
           is_alpine: true
           <<: *filters
       - test:
@@ -194,12 +176,8 @@ workflows:
               ignore: /.*/
             <<: *version_tags
           requires:
-            - test-latest
-            - test-latest-alpine
             - test-dubnium
             - test-dubnium-alpine
-            - test-carbon
-            - test-carbon-alpine
   serverless:
     jobs:
       - test:
