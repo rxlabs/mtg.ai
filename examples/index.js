@@ -2,10 +2,10 @@ import path from 'path'
 
 import createExamples from '@meltwater/examplr'
 
-import todo from './todo'
+import assistant from './assistant'
 
 const examples = {
-  todo
+  assistant
 }
 
 const envVars = [
