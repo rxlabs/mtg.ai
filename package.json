@@ -1,6 +1,6 @@
 {
-  "name": "@makenew/serverless-nodejs",
-  "version": "1.0.2",
+  "name": "@rxlabs/mtg.ai",
+  "version": "0.0.0",
   "description": "Package skeleton for an Node.js Serverless project.",
   "main": "dist/index.js",
   "module": "index.js",
@@ -8,9 +8,9 @@
   "keywords": [
     "node"
   ],
-  "homepage": "https://github.com/makenew/serverless-nodejs",
-  "bugs": "https://github.com/makenew/serverless-nodejs/issues",
-  "repository": "makenew/serverless-nodejs",
+  "homepage": "https://github.com/rxlabs/mtg.ai",
+  "bugs": "https://github.com/rxlabs/mtg.ai/issues",
+  "repository": "rxlabs/mtg.ai",
   "license": "MIT",
   "author": {
     "name": "Evan Sosenko",

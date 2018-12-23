@@ -1,138 +1,27 @@
 # Serverless Node.js Project Skeleton
 
-[![npm](https://img.shields.io/npm/v/@makenew/serverless-nodejs.svg)](https://www.npmjs.com/package/@makenew/serverless-nodejs)
-[![Codecov](https://img.shields.io/codecov/c/github/makenew/serverless-nodejs.svg)](https://codecov.io/gh/makenew/serverless-nodejs)
-[![CircleCI](https://img.shields.io/circleci/project/github/makenew/serverless-nodejs.svg)](https://circleci.com/gh/makenew/serverless-nodejs)
+[![npm](https://img.shields.io/npm/v/@rxlabs/mtg.ai.svg)](https://www.npmjs.com/package/@rxlabs/mtg.ai)
+[![Codecov](https://img.shields.io/codecov/c/github/rxlabs/mtg.ai.svg)](https://codecov.io/gh/rxlabs/mtg.ai)
+[![CircleCI](https://img.shields.io/circleci/project/github/rxlabs/mtg.ai.svg)](https://circleci.com/gh/rxlabs/mtg.ai)
 
 Package skeleton for an Node.js Serverless project on AWS Lambda.
 
 ## Description
 
-Bootstrap a new Node.js Serverless project in five minutes or less.
-
-### Features
-
-- Deploy to [AWS Lambda] under a
-  [custom domain][serverless-domain-manager] with [Serverless].
-- [Node.js]'s [npm] package structure.
-- Fast, reliable, and secure dependency management with [Yarn].
-- Next generation JavaScript with [Babel].
-- Examples with configurable options and arguments powered by [examplr].
-- Linting with the [JavaScript Standard Style] and [JSON Lint].
-- Automatically lint on changes with [gulp].
-- Futuristic debuggable unit testing with [AVA].
-- Code coverage reporting with [Istanbul], [nyc], and [Codecov].
-- Continuous testing and automated package publishing with [CircleCI].
-- [Keep a CHANGELOG].
-- Consistent coding with [EditorConfig].
-- Badges from [Shields.io].
-
-[AVA]: https://github.com/avajs/ava
-[AWS Lambda]: https://aws.amazon.com/lambda/
-[Serverless]: https://serverless.com/
-[Babel]: https://babeljs.io/
-[CircleCI]: https://circleci.com/
-[Codecov]: https://codecov.io/
-[EditorConfig]: https://editorconfig.org/
-[Istanbul]: https://istanbul.js.org/
-[JSON Lint]: https://github.com/zaach/jsonlint
-[JavaScript Standard Style]: https://standardjs.com/
-[Keep a CHANGELOG]: https://keepachangelog.com/
-[Node.js]: https://nodejs.org/
-[Shields.io]: https://shields.io/
-[examplr]: https://github.com/meltwater/node-examplr
-[gulp]: https://gulpjs.com/
-[npm]: https://www.npmjs.com/
-[nyc]: https://github.com/istanbuljs/nyc
-[Yarn]: https://yarnpkg.com/
-[serverless-domain-manager]: https://github.com/amplify-education/serverless-domain-manager
-
-### Bootstrapping a new project
-
-1. Create an empty (**non-initialized**) repository on GitHub.
-2. Clone the master branch of this repository with
-   ```
-   $ git clone --single-branch git@github.com:makenew/serverless-nodejs.git <new-node-lib>
-   $ cd <new-node-lib>
-   ```
-   Optionally, reset to the latest version with
-   ```
-   $ git reset --hard <version-tag>
-   ```
-3. Run
-   ```
-   $ ./makenew.sh
-   ```
-   This will replace the boilerplate, delete itself,
-   remove the git remote, remove upstream tags,
-   and stage changes for commit.
-4. Create the required CircleCI environment variables with
-   ```
-   $ .circleci/envvars.sh
-   ```
-5. Review, commit, and push the changes to GitHub with
-   ```
-   $ git diff --cached
-   $ git commit -m "Replace makenew boilerplate"
-   $ git remote add origin git@github.com:<user>/<new-node-lib>.git
-   $ git push -u origin master
-   ```
-6. Ensure the CircleCI build passes,
-   then publish the initial version of the package with
-   ```
-   $ nvm install
-   $ yarn install
-   $ npm version patch
-   ```
-7. Ensure a valid certificate exists in [AWS Certificate Manager]
-   that matches the custom deployment domains,
-   e.g., this project uses a wildcard certificate for
-   `*.serverless-nodejs.makenew.razorx.app`.
-   Then trigger a deploy to the test stage with
-   ```
-   $ yarn run release:test
-   ```
-
-[AWS Certificate Manager]: https://aws.amazon.com/certificate-manager/
-
-### Updating from this skeleton
-
-If you want to pull in future updates from this skeleton,
-you can fetch and merge in changes from this repository.
-
-Add this as a new remote with
-
-```
-$ git remote add upstream git@github.com:makenew/serverless-nodejs.git
-```
-
-You can then fetch and merge changes with
-
-```
-$ git fetch --no-tags upstream
-$ git merge upstream/master
-```
-
-#### Changelog for this skeleton
-
-Note that `CHANGELOG.md` is just a template for this skeleton.
-The actual changes for this project are documented in the commit history
-and summarized under [Releases].
-
-[Releases]: https://github.com/makenew/serverless-nodejs/releases
+TODO
 
 ## Installation
 
 Add this as a dependency to your project using [npm] with
 
 ```
-$ npm install @makenew/serverless-nodejs
+$ npm install @rxlabs/mtg.ai
 ```
 
 or using [Yarn] with
 
 ```
-$ yarn add @makenew/serverless-nodejs
+$ yarn add @rxlabs/mtg.ai
 ```
 
 [npm]: https://www.npmjs.com/
@@ -143,8 +32,8 @@ $ yarn add @makenew/serverless-nodejs
 ### Quickstart
 
 ```
-$ git clone https://github.com/makenew/serverless-nodejs.git
-$ cd serverless-nodejs
+$ git clone https://github.com/rxlabs/mtg.ai.git
+$ cd mtg-ai
 $ nvm install
 $ yarn install
 ```
@@ -170,10 +59,10 @@ The [source code] is hosted on GitHub.
 Clone the project with
 
 ```
-$ git clone git@github.com:makenew/serverless-nodejs.git
+$ git clone git@github.com:rxlabs/mtg.ai.git
 ```
 
-[source code]: https://github.com/makenew/serverless-nodejs
+[source code]: https://github.com/rxlabs/mtg.ai
 
 ### Requirements
 
@@ -242,7 +131,7 @@ Please submit and comment on bug reports and feature requests.
 
 To submit a patch:
 
-1. Fork it (https://github.com/makenew/serverless-nodejs/fork).
+1. Fork it (https://github.com/rxlabs/mtg.ai/fork).
 2. Create your feature branch (`git checkout -b my-new-feature`).
 3. Make changes.
 4. Commit your changes (`git commit -am 'Add some feature'`).

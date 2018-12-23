@@ -1,5 +1,5 @@
 ---
-service: serverless-nodejs
+service: mtg-ai
 
 frameworkVersion: "^1.32.0"
 
@@ -17,7 +17,7 @@ provider:
     NODE_ENV: production
 
 custom:
-  domain: makenew.razorx.app
+  domain: mtg.ai.razorx.app
   customDomain:
     domainName: ${self:provider.stage}.${self:service}.${self:custom.domain}
     endpointType: regional
