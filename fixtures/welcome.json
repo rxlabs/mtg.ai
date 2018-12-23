@@ -1,0 +1,96 @@
+{
+  "responseId": "75ad72bb-6ba4-4187-a4e0-5c9dc0008001",
+  "queryResult": {
+    "queryText": "GOOGLE_ASSISTANT_WELCOME",
+    "action": "input.welcome",
+    "parameters": {},
+    "allRequiredParamsPresent": true,
+    "outputContexts": [
+      {
+        "name": "projects/mtg-ai-a4684/agent/sessions/ABwppHETk78QUBv-JLxdU4o5gZ5eBpECnWiDB-OUz6hvN3rpOtNk8LGZZpYZpPN4uUBSJcXb_mooVScZ/contexts/google_assistant_welcome"
+      },
+      {
+        "name": "projects/mtg-ai-a4684/agent/sessions/ABwppHETk78QUBv-JLxdU4o5gZ5eBpECnWiDB-OUz6hvN3rpOtNk8LGZZpYZpPN4uUBSJcXb_mooVScZ/contexts/actions_capability_screen_output"
+      },
+      {
+        "name": "projects/mtg-ai-a4684/agent/sessions/ABwppHETk78QUBv-JLxdU4o5gZ5eBpECnWiDB-OUz6hvN3rpOtNk8LGZZpYZpPN4uUBSJcXb_mooVScZ/contexts/actions_capability_audio_output"
+      },
+      {
+        "name": "projects/mtg-ai-a4684/agent/sessions/ABwppHETk78QUBv-JLxdU4o5gZ5eBpECnWiDB-OUz6hvN3rpOtNk8LGZZpYZpPN4uUBSJcXb_mooVScZ/contexts/google_assistant_input_type_keyboard"
+      },
+      {
+        "name": "projects/mtg-ai-a4684/agent/sessions/ABwppHETk78QUBv-JLxdU4o5gZ5eBpECnWiDB-OUz6hvN3rpOtNk8LGZZpYZpPN4uUBSJcXb_mooVScZ/contexts/actions_capability_media_response_audio"
+      },
+      {
+        "name": "projects/mtg-ai-a4684/agent/sessions/ABwppHETk78QUBv-JLxdU4o5gZ5eBpECnWiDB-OUz6hvN3rpOtNk8LGZZpYZpPN4uUBSJcXb_mooVScZ/contexts/actions_capability_web_browser"
+      }
+    ],
+    "intent": {
+      "name": "projects/mtg-ai-a4684/agent/intents/8ff9b095-553a-42c9-a836-a0ddf6792a21",
+      "displayName": "Default Welcome Intent"
+    },
+    "intentDetectionConfidence": 1,
+    "languageCode": "en-us"
+  },
+  "originalDetectIntentRequest": {
+    "source": "google",
+    "version": "2",
+    "payload": {
+      "isInSandbox": true,
+      "surface": {
+        "capabilities": [
+          {
+            "name": "actions.capability.AUDIO_OUTPUT"
+          },
+          {
+            "name": "actions.capability.WEB_BROWSER"
+          },
+          {
+            "name": "actions.capability.SCREEN_OUTPUT"
+          },
+          {
+            "name": "actions.capability.MEDIA_RESPONSE_AUDIO"
+          }
+        ]
+      },
+      "requestType": "SIMULATOR",
+      "inputs": [
+        {
+          "rawInputs": [
+            {
+              "query": "Talk to Magic: The Gathering AI",
+              "inputType": "KEYBOARD"
+            }
+          ],
+          "intent": "actions.intent.MAIN"
+        }
+      ],
+      "user": {
+        "userStorage": "{\"data\":{}}",
+        "lastSeen": "2018-12-23T17:38:01Z",
+        "locale": "en-US",
+        "userId": "ABwppHEwmE-qezxQ4hwBy1MU020eIFBIdeVgWcdUL84TbjZOWC4-9HFIvaB8OpENj92HXiIp2wpxTfL-"
+      },
+      "conversation": {
+        "conversationId": "ABwppHETk78QUBv-JLxdU4o5gZ5eBpECnWiDB-OUz6hvN3rpOtNk8LGZZpYZpPN4uUBSJcXb_mooVScZ",
+        "type": "NEW"
+      },
+      "availableSurfaces": [
+        {
+          "capabilities": [
+            {
+              "name": "actions.capability.AUDIO_OUTPUT"
+            },
+            {
+              "name": "actions.capability.WEB_BROWSER"
+            },
+            {
+              "name": "actions.capability.SCREEN_OUTPUT"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "session": "projects/mtg-ai-a4684/agent/sessions/ABwppHETk78QUBv-JLxdU4o5gZ5eBpECnWiDB-OUz6hvN3rpOtNk8LGZZpYZpPN4uUBSJcXb_mooVScZ"
+}

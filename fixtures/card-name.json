@@ -1,10 +1,9 @@
 {
-  "responseId": "a810facd-beb9-40e9-bc70-dd4b0805f41e",
+  "responseId": "a7880b30-faeb-4df2-8fc5-caa036ab7bd5",
   "queryResult": {
-    "queryText": "What does the card doom blade say",
-    "action": "get_card_by_name",
+    "queryText": "what is green",
     "parameters": {
-      "cardName": "doom blade"
+      "cardName": "green"
     },
     "allRequiredParamsPresent": true,
     "fulfillmentMessages": [
@@ -17,15 +16,14 @@
       }
     ],
     "intent": {
-      "name": "projects/mtg-ai-1912b/agent/intents/6c13466d-871b-4f70-aa22-b3992708b6f1",
+      "name": "projects/mtg-ai-a4684/agent/intents/a5daa9f3-48c1-40e3-8434-33808a7b3410",
       "displayName": "get_card_by_name"
     },
     "intentDetectionConfidence": 1,
-    "diagnosticInfo": {},
     "languageCode": "en"
   },
   "originalDetectIntentRequest": {
     "payload": {}
   },
-  "session": "projects/mtg-ai-1912b/agent/sessions/70abdd2f-d81f-40ef-95c9-00e88911da1c"
+  "session": "projects/mtg-ai-a4684/agent/sessions/ed93d5c5-a405-6ea1-a2f2-8274c92cd170"
 }

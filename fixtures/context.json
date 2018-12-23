@@ -1,0 +1,11 @@
+{
+  "callbackWaitsForEmptyEventLoop": true,
+  "logGroupName": "/aws/lambda/mtg-ai-dev-assistant",
+  "logStreamName": "2018/12/23/[$LATEST]d9c64069f3a14bfe8ca741a459aa098c",
+  "functionName": "mtg-ai-dev-assistant",
+  "memoryLimitInMB": "1024",
+  "functionVersion": "$LATEST",
+  "invokeid": "6550289f-06da-11e9-981d-8beb18b9310f",
+  "awsRequestId": "6550289f-06da-11e9-981d-8beb18b9310f",
+  "invokedFunctionArn": "arn:aws:lambda:us-west-2:969145713151:function:mtg-ai-dev-assistant"
+}

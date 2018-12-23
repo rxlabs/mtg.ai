@@ -1,39 +1,90 @@
 {
-  "body": {},
-  "resource": "/assistant",
-  "path": "/assistant",
+  "resource": "/fulfillment",
+  "path": "/fulfillment",
   "httpMethod": "POST",
-  "isBase64Encoded": false,
-  "queryStringParameters": {},
-  "pathParameters": {},
-  "stageVariables": {},
   "headers": {
-    "Accept": "application/json,text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "Accept-Encoding": "gzip, deflate, sdch",
-    "Accept-Language": "en-US,en;q=0.8",
-    "Cache-Control": "max-age=0",
-    "Host": "1234567890.execute-api.us-east-1.amazonaws.com",
-    "Upgrade-Insecure-Requests": "1",
-    "User-Agent": "Custom User Agent String",
-    "Via": "1.1 08f323deadbeefa7af34d5feb414ce27.cloudfront.net (CloudFront)",
-    "X-Amz-Cf-Id": "cDehVQoZnx43VYQb9j2-nvCh-9z396Uhbp027Y2JvkCPNLmGJHqlaA==",
-    "X-Forwarded-For": "127.0.0.1, 127.0.0.2",
+    "Accept": "text/plain, */*",
+    "Accept-Charset": "big5, big5-hkscs, cesu-8, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm290, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-compound_text, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1166, x-ibm1364, x-ibm1381, x-ibm1383, x-ibm300, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macroman, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp",
+    "Accept-Encoding": "gzip,deflate",
+    "Content-Type": "application/json; charset=UTF-8",
+    "Host": "dev.mtg.ai.razorx.app",
+    "User-Agent": "Apache-HttpClient/4.5.6 (Java/1.8.0_181)",
+    "X-Amzn-Trace-Id": "Root=1-5c1fc97c-829b797a978bb320c772deb0",
+    "x-api-key": "Q0wK3MWtm89H49Hyhdvtb4bArXJh0qHM7UjclOiz",
+    "X-Forwarded-For": "35.193.215.190",
     "X-Forwarded-Port": "443",
     "X-Forwarded-Proto": "https"
   },
+  "multiValueHeaders": {
+    "Accept": [
+      "text/plain, */*"
+    ],
+    "Accept-Charset": [
+      "big5, big5-hkscs, cesu-8, euc-jp, euc-kr, gb18030, gb2312, gbk, ibm-thai, ibm00858, ibm01140, ibm01141, ibm01142, ibm01143, ibm01144, ibm01145, ibm01146, ibm01147, ibm01148, ibm01149, ibm037, ibm1026, ibm1047, ibm273, ibm277, ibm278, ibm280, ibm284, ibm285, ibm290, ibm297, ibm420, ibm424, ibm437, ibm500, ibm775, ibm850, ibm852, ibm855, ibm857, ibm860, ibm861, ibm862, ibm863, ibm864, ibm865, ibm866, ibm868, ibm869, ibm870, ibm871, ibm918, iso-2022-cn, iso-2022-jp, iso-2022-jp-2, iso-2022-kr, iso-8859-1, iso-8859-13, iso-8859-15, iso-8859-2, iso-8859-3, iso-8859-4, iso-8859-5, iso-8859-6, iso-8859-7, iso-8859-8, iso-8859-9, jis_x0201, jis_x0212-1990, koi8-r, koi8-u, shift_jis, tis-620, us-ascii, utf-16, utf-16be, utf-16le, utf-32, utf-32be, utf-32le, utf-8, windows-1250, windows-1251, windows-1252, windows-1253, windows-1254, windows-1255, windows-1256, windows-1257, windows-1258, windows-31j, x-big5-hkscs-2001, x-big5-solaris, x-compound_text, x-euc-jp-linux, x-euc-tw, x-eucjp-open, x-ibm1006, x-ibm1025, x-ibm1046, x-ibm1097, x-ibm1098, x-ibm1112, x-ibm1122, x-ibm1123, x-ibm1124, x-ibm1166, x-ibm1364, x-ibm1381, x-ibm1383, x-ibm300, x-ibm33722, x-ibm737, x-ibm833, x-ibm834, x-ibm856, x-ibm874, x-ibm875, x-ibm921, x-ibm922, x-ibm930, x-ibm933, x-ibm935, x-ibm937, x-ibm939, x-ibm942, x-ibm942c, x-ibm943, x-ibm943c, x-ibm948, x-ibm949, x-ibm949c, x-ibm950, x-ibm964, x-ibm970, x-iscii91, x-iso-2022-cn-cns, x-iso-2022-cn-gb, x-iso-8859-11, x-jis0208, x-jisautodetect, x-johab, x-macarabic, x-maccentraleurope, x-maccroatian, x-maccyrillic, x-macdingbat, x-macgreek, x-machebrew, x-maciceland, x-macroman, x-macromania, x-macsymbol, x-macthai, x-macturkish, x-macukraine, x-ms932_0213, x-ms950-hkscs, x-ms950-hkscs-xp, x-mswin-936, x-pck, x-sjis_0213, x-utf-16le-bom, x-utf-32be-bom, x-utf-32le-bom, x-windows-50220, x-windows-50221, x-windows-874, x-windows-949, x-windows-950, x-windows-iso2022jp"
+    ],
+    "Accept-Encoding": [
+      "gzip,deflate"
+    ],
+    "Content-Type": [
+      "application/json; charset=UTF-8"
+    ],
+    "Host": [
+      "dev.mtg.ai.razorx.app"
+    ],
+    "User-Agent": [
+      "Apache-HttpClient/4.5.6 (Java/1.8.0_181)"
+    ],
+    "X-Amzn-Trace-Id": [
+      "Root=1-5c1fc97c-829b797a978bb320c772deb0"
+    ],
+    "x-api-key": [
+      "Q0wK3MWtm89H49Hyhdvtb4bArXJh0qHM7UjclOiz"
+    ],
+    "X-Forwarded-For": [
+      "35.193.215.190"
+    ],
+    "X-Forwarded-Port": [
+      "443"
+    ],
+    "X-Forwarded-Proto": [
+      "https"
+    ]
+  },
+  "queryStringParameters": null,
+  "multiValueQueryStringParameters": null,
+  "pathParameters": null,
+  "stageVariables": null,
   "requestContext": {
-    "accountId": "123456789012",
-    "resourceId": "123456",
-    "stage": "prod",
-    "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
-    "requestTime": "09/Apr/2015:12:34:56 +0000",
-    "requestTimeEpoch": 1428582896000,
-    "identity": {
-    },
-    "path": "/assistant",
-    "resourcePath": "/assistant",
+    "resourceId": "4kkcda",
+    "resourcePath": "/fulfillment",
     "httpMethod": "POST",
-    "apiId": "1234567890",
-    "protocol": "HTTP/1.1"
-  }
+    "extendedRequestId": "SXxrbFpdPHcFsyA=",
+    "requestTime": "23/Dec/2018:17:44:28 +0000",
+    "path": "/fulfillment",
+    "accountId": "969145713151",
+    "protocol": "HTTP/1.1",
+    "stage": "dev",
+    "domainPrefix": "dev",
+    "requestTimeEpoch": 1545587068385,
+    "requestId": "654f65a0-06da-11e9-8bab-6d01f2461d30",
+    "identity": {
+      "cognitoIdentityPoolId": null,
+      "cognitoIdentityId": null,
+      "apiKey": "Q0wK3MWtm89H49Hyhdvtb4bArXJh0qHM7UjclOiz",
+      "cognitoAuthenticationType": null,
+      "userArn": null,
+      "apiKeyId": "qvpighgld0",
+      "userAgent": "Apache-HttpClient/4.5.6 (Java/1.8.0_181)",
+      "accountId": null,
+      "caller": null,
+      "sourceIp": "35.193.215.190",
+      "accessKey": null,
+      "cognitoAuthenticationProvider": null,
+      "user": null
+    },
+    "domainName": "dev.mtg.ai.razorx.app",
+    "apiId": "d26ak318kj"
+  },
+  "body": "{\n  \"responseId\": \"b425846d-df70-4a93-9014-3ec889b87424\",\n  \"queryResult\": {\n    \"queryText\": \"what is doom blade\",\n    \"parameters\": {\n      \"cardName\": \"doom blade\"\n    },\n    \"allRequiredParamsPresent\": true,\n    \"fulfillmentMessages\": [{\n      \"text\": {\n        \"text\": [\"\"]\n      }\n    }],\n    \"intent\": {\n      \"name\": \"projects/mtg-ai-a4684/agent/intents/a5daa9f3-48c1-40e3-8434-33808a7b3410\",\n      \"displayName\": \"get_card_by_name\"\n    },\n    \"intentDetectionConfidence\": 1.0,\n    \"languageCode\": \"en\"\n  },\n  \"originalDetectIntentRequest\": {\n    \"payload\": {\n    }\n  },\n  \"session\": \"projects/mtg-ai-a4684/agent/sessions/ed93d5c5-a405-6ea1-a2f2-8274c92cd170\"\n}",
+  "isBase64Encoded": false
 }
