@@ -33,9 +33,10 @@ package:
   individually: true
 
 functions:
-  todo:
-    handler: handlers/todo.default
+  assistant:
+    handler: handlers/fulfillment.default
     events:
       - http:
-          method: get
-          path: /todo
+          method: post
+          path: /fulfillment
+          private: true

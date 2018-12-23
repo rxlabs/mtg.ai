@@ -108,10 +108,16 @@
     "node": ">=8.9.0"
   },
   "dependencies": {
+    "actions-on-google": "^2.1.2",
     "aws-sdk": "2.290.0",
+    "got": "^9.5.0",
+    "i18next": "^11.3.2",
+    "roarr": "^2.3.0",
+    "sanctuary": "^0.14.1",
     "source-map-support": "^0.5.9"
   },
   "devDependencies": {
+    "@alienfast/i18next-loader": "^1.0.16",
     "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.1",
     "@babel/node": "^7.0.0",
