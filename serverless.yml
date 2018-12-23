@@ -15,6 +15,16 @@ provider:
   stage: ${opt:stage, env:SERVERLESS_STAGE, 'dev'}
   environment:
     NODE_ENV: production
+  apiKeys:
+    - ${self:provider.stage}-${self:service}
+  usagePlan:
+    quota:
+      limit: 5000
+      offset: 2
+      period: MONTH
+    throttle:
+      burstLimit: 200
+      rateLimit: 100
 
 custom:
   domain: razorx.app
