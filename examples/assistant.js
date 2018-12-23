@@ -8,7 +8,7 @@ export default ({ log }) => async (file = 'card-name') => {
   const app = dialogflowApp()
   const req = await readJson(path.join('fixtures', `post.json`))
   const body = await readJson(path.join('fixtures', `${file}.json`))
-  req.body = body
+  req.body = JSON.stringify(body)
   const result = app(req, {})
   return result
 }
