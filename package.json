@@ -47,7 +47,7 @@
     "postversion": "git push && git push --tags",
     "deploy": "npm-run-all --serial deploy:domain deploy:stack",
     "deploy:domain": "serverless create_domain",
-    "deploy:stack": "serverless deploy --aws-s3-accelerate",
+    "deploy:stack": "serverless deploy --aws-s3-accelerate --conceal",
     "release:alpha": "git tag --force stage.alpha && git push --force origin stage.alpha",
     "release:beta": "git tag --force stage.beta && git push --force origin stage.beta",
     "release:prod": "git tag --force stage.prod && git push --force origin stage.prod",
