@@ -137,7 +137,6 @@ jobs:
           name: Deploy
           command: |
             export SERVERLESS_STAGE="${CIRCLE_TAG##*.}"
-            export
             yarn run deploy
 
 references:
