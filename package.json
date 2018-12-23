@@ -111,9 +111,9 @@
     "actions-on-google": "^2.1.2",
     "aws-sdk": "2.290.0",
     "got": "^9.5.0",
-    "i18next": "^11.3.2",
+    "i18next": "^13.0.0",
     "roarr": "^2.3.0",
-    "sanctuary": "^0.14.1",
+    "sanctuary": "^0.15.0",
     "source-map-support": "^0.5.9"
   },
   "devDependencies": {
