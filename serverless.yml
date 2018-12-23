@@ -18,8 +18,9 @@ provider:
 
 custom:
   domain: mtg.ai.razorx.app
+  subdomain: mtg.ai
   customDomain:
-    domainName: ${self:provider.stage}.${self:service}.${self:custom.domain}
+    domainName: ${self:provider.stage}.${self:subdomain}.${self:custom.domain}
     endpointType: regional
     createRoute53Record: true
   webpack:
